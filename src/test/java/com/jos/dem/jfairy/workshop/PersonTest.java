@@ -3,6 +3,8 @@ package com.jos.dem.jfairy.workshop;
 import static org.junit.jupiter.api.Assertions.assertAll;;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import com.devskiller.jfairy.Fairy;
 import com.devskiller.jfairy.producer.person.Person;
 
@@ -20,7 +22,7 @@ class PersonTest {
   @Test
   @DisplayName("Should validate person")
   void shouldValidatePerson() {
-    log.info("Running: Should validate person information");
+    log.info("Running: Should validate information from person: " + ToStringBuilder.reflectionToString(person));
 
     assertAll("person",
         () -> assertNotNull(person.getFirstName(), "Should get person's name"),
