@@ -20,6 +20,7 @@ class PersonTest {
   private static final String PHONE_REGEX = "[0-9]{3}-[0-9]{3}-[0-9]{3,4}";
   private static final String VAT_REGEX = "[0-9]{2}-[0-9]{7}";
   private static final String DOMAIN_REGEX = "[a-zA-Z]+.[a-zA-Z]{2,10}";
+
   private Person person = Fairy.create().person();
 
   private static final Logger log = Logger.getLogger(PersonTest.class.getName());
