@@ -1,6 +1,7 @@
 package com.jos.dem.jfairy.workshop;
 
-import static org.junit.jupiter.api.Assertions.assertAll;;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -15,6 +16,7 @@ import java.util.logging.Logger;
 
 class PersonTest {
 
+  private static final String PHONE_REGEX = "[0-9]{3}-[0-9]{3}-[0-9]{4}";
   private Person person = Fairy.create().person();
 
   private static final Logger log = Logger.getLogger(PersonTest.class.getName());
@@ -27,7 +29,7 @@ class PersonTest {
     assertAll("person",
         () -> assertNotNull(person.getFirstName(), "Should get person's name"),
         () -> assertNotNull(person.getEmail(), "Should get person's email"),
-        () -> assertNotNull(person.getTelephoneNumber(), "Should get person's telephone number")
+        () -> assertTrue(person.getTelephoneNumber().matches(PHONE_REGEX), "Should have a valid telephone number")
         );
   }
 
