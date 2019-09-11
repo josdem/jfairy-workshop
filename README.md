@@ -1,22 +1,14 @@
 JFairy Workshop
 ------------------------------------
 
-You have just created a basic Java application. There is a standard project
-structure for source code and tests.
+This project shows how to use [Jfairy](https://devskiller.github.io/jfairy/) a Java fake data generator with Spring Boot.
 
-In this project you get:
+#### To run the project
 
-* A Gradle build file
-* A standard project structure:
+```bash
+gradle bootRun
+```
 
-    <proj>
-      |
-      +- src
-          |
-          +- main
-          |     |
-          |     +- java
-          |
-          +- test
-          |   |
-          |   +- java
+#### Read this as reference:
+
+* https://josdem.io/techtalk/java/jfairy/
